@@ -1188,4 +1188,4 @@ public class VacantesServiceImpl implements IVacantesService {
 
 En el constructor `public VacantesServiceImpl()` ha quedado el código que agrega los objetos de tipo `Vacante` y se elimina la línea de `return`. El atributo lista queda a nivel de la clase para quede accesible para todos los métodos de la clase de servicio. El método implementado `buscarTodas()` retorna la lista de vacantes.
 
-SIgo
+SIgooo
