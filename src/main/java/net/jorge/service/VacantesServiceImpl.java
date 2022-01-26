@@ -5,8 +5,11 @@ import java.text.SimpleDateFormat;
 import java.util.LinkedList;
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import net.jorge.model.Vacante;
 
+@Service
 public class VacantesServiceImpl implements IVacantesService {
 	
 	private List<Vacante> lista = null;
@@ -20,7 +23,7 @@ public class VacantesServiceImpl implements IVacantesService {
 			vacante1.setNombre("Ingeniero Espacial");
 			vacante1.setDescripcion("Solicitamos Ing Espacial para diseñar vuelo tripulado.");
 			vacante1.setFecha(sdf.parse("01-12-2021"));
-			vacante1.setSalario(9500000.0);
+			vacante1.setSalario(6500000.0);
 			vacante1.setDestacado(1);
 			vacante1.setImagen("empresa1.png");
 

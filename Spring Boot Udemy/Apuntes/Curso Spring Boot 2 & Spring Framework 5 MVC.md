@@ -1188,4 +1188,60 @@ public class VacantesServiceImpl implements IVacantesService {
 
 En el constructor `public VacantesServiceImpl()` ha quedado el código que agrega los objetos de tipo `Vacante` y se elimina la línea de `return`. El atributo lista queda a nivel de la clase para quede accesible para todos los métodos de la clase de servicio. El método implementado `buscarTodas()` retorna la lista de vacantes.
 
-SIgooo
+### Anotación @Autowired - Ejemplo de inyección de Dependencias en un controlador
+
+El primer paso será colocar la anotación `@Service` antes de la declaración de la clase de servicio `VacantesServiceImpl` (recordemos que esta clase de servicio implementa la interfaz):
+
+```java
+(...)
+@Service
+public class VacantesServiceImpl implements IVacantesService {
+(...)
+```
+
+Estas clases estan en el paquete net.jorge.service. Después de arrancar la aplicacion Spring va a escanear todos los paquetes y al encontrar la clase marcada con @Service va a crear una nueva instancia de esa clase en el contenedor de Beans lista para poder ser usada y tendrá un alcance Singleton (se crea solo una instancia para toda la aplicacion).
+
+Luego en `HomeController` debemos declarar un atributo a nivel de la clase del tipo de la interfaz, es decir de tipo `IVacantesService`. De esta manera inyectamos una instancia de la clase de servicio en el controlador. En el método `mostrarTabla()` podemos reemplazar `getVacantes()` por `serviceVacantes.buscarTodas()`. Se puede eliminar completamente el método `getVacantes()` del controlador:
+
+```java
+@Autowired
+private IVacantesService serviceVacantes;
+
+@GetMapping("/tabla")
+public String mostrarTabla(Model model) {
+	List<Vacante> lista = serviceVacantes.buscarTodas();
+	model.addAttribute("vacantes", lista);
+	return "tabla";
+}
+```
+
+Si hacemos una solicitud a la URL localhost:7070/tabla debería renderizar trayendo los datos desde un componente de la capa de servicios:
+
+![](D:\Spring Boot Udemy\Apuntes\imagenes\Resultado de mostrar vista tabla de vacantes desde capa de servicio.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
