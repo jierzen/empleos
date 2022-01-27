@@ -1215,7 +1215,7 @@ public String mostrarTabla(Model model) {
 }
 ```
 
-Si hacemos una solicitud a la URL localhost:7070/tabla debería renderizar trayendo los datos desde un componente de la capa de servicios:
+Si hacemos una solicitud a la URL `localhost:7070/tabla` debería renderizar trayendo los datos desde un componente de la capa de servicios:
 
 ![](D:\Spring Boot Udemy\Apuntes\imagenes\Resultado de mostrar vista tabla de vacantes desde capa de servicio.png)
 
