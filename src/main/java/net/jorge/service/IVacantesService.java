@@ -6,4 +6,5 @@ import net.jorge.model.Vacante;
 
 public interface IVacantesService {
 	List<Vacante> buscarTodas();
+	Vacante buscarPorId(Integer id);
 }

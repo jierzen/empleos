@@ -62,15 +62,22 @@ public class VacantesServiceImpl implements IVacantesService {
 			// TODO: handle exception
 			System.out.println("Error: " + e.getMessage());
 		}
-		
-		
-	
 	}
 	
 	@Override
 	public List<Vacante> buscarTodas() {
 		
 		return lista;
+	}
+
+	@Override
+	public Vacante buscarPorId(Integer id) {
+		for(Vacante v : lista) {
+			if(v.getId() == id) {
+				return v;
+			}
+		}
+		return null;
 	}
 
 }

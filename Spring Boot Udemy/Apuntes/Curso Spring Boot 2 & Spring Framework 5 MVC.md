@@ -1199,7 +1199,7 @@ public class VacantesServiceImpl implements IVacantesService {
 (...)
 ```
 
-Estas clases estan en el paquete net.jorge.service. Después de arrancar la aplicacion Spring va a escanear todos los paquetes y al encontrar la clase marcada con @Service va a crear una nueva instancia de esa clase en el contenedor de Beans lista para poder ser usada y tendrá un alcance Singleton (se crea solo una instancia para toda la aplicacion).
+Estas clases están en el paquete `net.jorge.service`. Después de arrancar la aplicación Spring va a escanear todos los paquetes y al encontrar la clase marcada con `@Service` va a crear una nueva instancia de esa clase en el contenedor de `Beans` lista para poder ser usada y tendrá un alcance `Singleton` (se crea solo una instancia para toda la aplicación).
 
 Luego en `HomeController` debemos declarar un atributo a nivel de la clase del tipo de la interfaz, es decir de tipo `IVacantesService`. De esta manera inyectamos una instancia de la clase de servicio en el controlador. En el método `mostrarTabla()` podemos reemplazar `getVacantes()` por `serviceVacantes.buscarTodas()`. Se puede eliminar completamente el método `getVacantes()` del controlador:
 
@@ -1221,15 +1221,55 @@ Si hacemos una solicitud a la URL `localhost:7070/tabla` debería renderizar tra
 
 
 
+### Implementación del método buscarPorId en la clase de servicio
 
+En la interface `IVacantesService` crear el método `buscarPorId` el cual recibe una variable id de tipo `Integer` y que retorna un objeto de tipo `Vacante`:
 
+```java
+public interface IVacantesService {
+	List<Vacante> buscarTodas();
+	Vacante buscarPorId(Integer id);
+}
 
+```
 
+Se deberá implementar el método recién creado en la clase de servicio `VacantesServiceImpl`, el cual recorre todos los objetos de tipo `Vacante` y compara sus id con el parámetro id del método. Si no encuentra alguna vacante, retornará `null`:
 
+```java
+@Override
+public Vacante buscarPorId(Integer id) {
+	for(Vacante v : lista) {
+		if(v.getId() == id) {
+			return v;
+		}
+	}
+	return null;
+}
+```
 
+En el controlador `VacantesController` inyectamos la clase de servicio con la ayuda del `@Autowired` para poder usar el método `buscarPorId`. La vista `detalle.html` que está dentro del directorio `vacantes` debe ser borrada y en su lugar será utilizada la vista `detalle.html` que está directamente en la raíz:
 
+```java
+@Autowired
+private IVacantesService serviceVacantes;
+	
+@GetMapping("/delete"){
+	(...)
+}
+	
+@GetMapping("/view/{id}")
+public String verDetalle(@PathVariable("id") int idVacante, Model model) {
+	Vacante vacante = serviceVacantes.buscarPorId(idVacante);
+	System.out.println("vacante: " + vacante);
+	model.addAttribute("vacante", vacante);
+	//Buscar los detalles de la vacante en la base de datos
+	return "detalle";
+}
+```
 
+De esta manera, en la vista `tablas` podremos cliquear en cualquier botón `Ver Detalle` y nos debería renderizar el resultado siguiente:
 
+<img src="D:\Spring Boot Udemy\Apuntes\imagenes\Resultado de mostrar vacante mediante metodo implementado en el controlador.png" style="zoom:67%;" />
 
 
 
