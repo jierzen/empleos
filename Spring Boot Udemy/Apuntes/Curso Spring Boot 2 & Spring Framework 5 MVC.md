@@ -27,19 +27,19 @@ Spring Boot simplifica los pasos 1 y 3 del proceso, para enfocarse en el paso 2 
 
 1. Navega a la [página oficial](https://www.oracle.com/cl/java/technologies/javase/jdk11-archive-downloads.html) de Oracle para descargar e instalar el JDK (11.0.12 del Java SE Development Kit, fecha 16-11-2021).
 
-   ![](D:\Spring Boot Udemy\Apuntes\imagenes\JDK pagina de descarga 16-11-2021.png)
+   ![](C:\WorkSpace\empleos\Spring Boot Udemy\Apuntes\imagenes\JDK pagina de descarga 16-11-2021.png)
 
 2. Crea una nueva `variable de entorno del sistema` llamada JAVA_HOME que contenga la ruta del JDK instalada, en este caso es `C:\Program Files\Java\jdk-11.0.12`.
 
-   ![](D:\Spring Boot Udemy\Apuntes\imagenes\Variable de entorno JDK.png)
+   ![](C:\WorkSpace\empleos\Spring Boot Udemy\Apuntes\imagenes\Variable de entorno JDK.png)
 
 3. Edita la `variable de entorno del sistema` llamada Path agregando la ruta `%JAVA_HOME%\bin`.
 
-   ![](D:\Spring Boot Udemy\Apuntes\imagenes\Variable de entorno JDK path.png)
+   ![](C:\WorkSpace\empleos\Spring Boot Udemy\Apuntes\imagenes\Variable de entorno JDK path.png)
 
 4. Realiza la comprobación del JDK en `cmd` con los comandos `echo %JAVA_HOME%` y `javac -version`.
 
-   ![](D:\Spring Boot Udemy\Apuntes\imagenes\Comprobacion del JDK.png)
+   ![](C:\WorkSpace\empleos\Spring Boot Udemy\Apuntes\imagenes\Comprobacion del JDK.png)
 
 5. Reinicia el equipo.
 
@@ -51,27 +51,27 @@ Está basado en Eclipse
 
 2. Descargar el archivo para el sistema operativo correspondiente, en este caso es Windows 10.
 
-   ![IDE](D:\Spring Boot Udemy\Apuntes\imagenes\IDE descargar.png)
+   ![IDE](C:\WorkSpace\empleos\Spring Boot Udemy\Apuntes\imagenes\IDE descargar.png)
 
 3. Mueve y extrae el contenido del archivo .jar la carpeta en `C:` (si no puede abrir el archivo se deberá instalar [Java Runtime Environment](https://www.java.com/es/download/), con se extraerá sin problemas) y se creará la carpeta STS donde estará ubicado el IDE.
 
 4. Entra en la carpeta del IDE y edita el archivo `SpringToolSuite4.ini` para asignar la ruta `C:\Program Files\Java\jdk-11.0.12\bin\javaw.exe` después del `-vm` y antes del `-vmargs` (debe coincidir con la ruta del JDK instalado [antes](###Instalación de Java SE Development Kit 11 (JDK))). 
 
-   ![](D:\Spring Boot Udemy\Apuntes\imagenes\Ruta en archivo ini de Spring Boot.png)
+   ![](C:\WorkSpace\empleos\Spring Boot Udemy\Apuntes\imagenes\Ruta en archivo ini de Spring Boot.png)
 
 4. Iniciar el ejecutable de Spring Boot. Se abrirá un cuadro de diálogo para asignar la ruta del WorkSpace o directorio de los proyectos por defecto. En este caso se usa la ruta `C:\WorkSpace` y el IDE creará la carpeta llamada WorkSpace. Chequear opción de recordar el directorio.
 
-   <img src="D:\Spring Boot Udemy\Apuntes\imagenes\WorkSpace IDE.png" style="zoom:67%;" />
+   <img src="C:\WorkSpace\empleos\Spring Boot Udemy\Apuntes\imagenes\WorkSpace IDE.png" style="zoom:67%;" />
 
 ### Crear proyecto en Spring Initializr
 
 1. Navegar a Spring Initializr mediante este [link](https://start.spring.io/) para seleccionar las siguientes opciones. (NOTA: En la parte final seleccionar la versión del JDK instalada en el equipo).
 
-   <img src="D:\Spring Boot Udemy\Apuntes\imagenes\Spring Initializr parte 1.png" style="zoom:67%;" />
+   <img src="C:\WorkSpace\empleos\Spring Boot Udemy\Apuntes\imagenes\Spring Initializr parte 1.png" style="zoom:67%;" />
 
 2. En las dependencias buscar y agregar la dependencia Web 
 
-   <img src="D:\Spring Boot Udemy\Apuntes\imagenes\Spring Initializr parte 2.png" style="zoom:67%;" />
+   <img src="C:\WorkSpace\empleos\Spring Boot Udemy\Apuntes\imagenes\Spring Initializr parte 2.png" style="zoom:67%;" />
 
 3. Presiona botón `Generate` para guardar el archivo en formato `.zip`.
 
@@ -81,13 +81,13 @@ Está basado en Eclipse
 
 5. Seleccionar en `Browse` el directorio del proyecto para detectar el archivo `pom.xml`. Presionar botón `Finish` para que el IDE descargue las dependencias necesarias para el proyecto (en este caso solamente la dependencia Web). En la parte inferior derecha se verá el progreso de la descarga.
 
-   ![](D:\Spring Boot Udemy\Apuntes\imagenes\IDE importar proyecto porcentaje descarga.png)
+   ![](C:\WorkSpace\empleos\Spring Boot Udemy\Apuntes\imagenes\IDE importar proyecto porcentaje descarga.png)
 
 ### Iniciar y detener un proyecto
 
 Configuración inicial: Para que la versión Java del proyecto coincida con la versión instalada en el equipo clic secundario al `JRE System Library > Properties > WorkSpace Default JRE (jdk-11.0.12)` y aplicar la configuración.
 
-![](D:\Spring Boot Udemy\Apuntes\imagenes\Asignar version actual de JDK al proyecto.png)
+![](C:\WorkSpace\empleos\Spring Boot Udemy\Apuntes\imagenes\Asignar version actual de JDK al proyecto.png)
 
 Si tu puerto 8080 está ocupado, podrás cambiarlo en `src/main/resources > application.properties` y escribir la línea:
 
@@ -95,19 +95,19 @@ Si tu puerto 8080 está ocupado, podrás cambiarlo en `src/main/resources > appl
 server.port=7070
 ```
 
-![](D:\Spring Boot Udemy\Apuntes\imagenes\Cambiar puerto del servidor del proyecto.png)
+![](C:\WorkSpace\empleos\Spring Boot Udemy\Apuntes\imagenes\Cambiar puerto del servidor del proyecto.png)
 
 * Para iniciar el proyecto ir a la zona inferior izquierda del IDE y utilizar el botón `Start or restart`. Si desea detener el proyecto usar botón `Stop`. NOTA: En la imagen se observa una flecha verde apuntando hacia arriba, significa que el proyecto está andando.
 
-  ![](D:\Spring Boot Udemy\Apuntes\imagenes\Iniciar o detener un proyecto.png)
+  ![](C:\WorkSpace\empleos\Spring Boot Udemy\Apuntes\imagenes\Iniciar o detener un proyecto.png)
 
 * Para realizar la comprobación de funcionamiento de la aplicación inicia un navegador y dirígete a `http://localhost:8080` donde debe aparecer el error 404. Este error hace referencia a que el servidor Apache Tomcat de nuestra aplicación esta funcionando en blanco.
 
-  <img src="D:\Spring Boot Udemy\Apuntes\imagenes\Error 404 de apache confirmando el funcionamiento del servidor.png" style="zoom:67%;" />
+  <img src="C:\WorkSpace\empleos\Spring Boot Udemy\Apuntes\imagenes\Error 404 de apache confirmando el funcionamiento del servidor.png" style="zoom:67%;" />
 
 * Si se detiene el proyecto y refresca la pagina aparecerá una nueva información con el mensaje de que "No se puede acceder a este sitio", lo que confirma el funcionamiento correcto de Apache Tomcat.
 
-  <img src="D:\Spring Boot Udemy\Apuntes\imagenes\Comprobacion de no funcionamiento de Apache Tomcat.png" style="zoom: 50%;" />
+  <img src="C:\WorkSpace\empleos\Spring Boot Udemy\Apuntes\imagenes\Comprobacion de no funcionamiento de Apache Tomcat.png" style="zoom: 50%;" />
 
 ### Crear un controlador
 
@@ -134,7 +134,7 @@ public class HomeController {
 
 De esta manera el método `Inicio()` se ejecutará cuando hagamos una petición HTTP tipo `GET` a la url `/` que es el directorio raíz de la aplicación. Iniciamos el proyecto y navegamos a `http://localhost:7070/` y obtenemos:
 
-![](D:\Spring Boot Udemy\Apuntes\imagenes\holaMundo inicial.png)
+![](C:\WorkSpace\empleos\Spring Boot Udemy\Apuntes\imagenes\holaMundo inicial.png)
 
 
 
@@ -198,7 +198,7 @@ public class HomeController {
 
 Creamos el proyecto tal como el proyecto anterior pero con los siguientes datos:
 
-![](D:\Spring Boot Udemy\Apuntes\imagenes\Crear proyecto empleos Spring Initializr.png)
+![](C:\WorkSpace\empleos\Spring Boot Udemy\Apuntes\imagenes\Crear proyecto empleos Spring Initializr.png)
 
 NOTA: las dependencias son Web, Thymeleaf y Spring Boot DevTools. Debemos importar el proyecto según lo vimos [mas arriba](###Crear-proyecto-en-Spring-Initializr).
 
@@ -225,11 +225,11 @@ TIP: Indentar código en Spring Boot IDE: `CTRL` + `SHIFT` + `F`
 
 Existe la posibilidad de no encontrar la plantilla HTML para las vistas en `New > Other > Other > HTML File`. Para solucionarlo debemos buscar el plugin de Thymeleaf en `Help > Eclipse Marketplace` y buscar "thymeleaf" para instalarlo.
 
-![](D:\Spring Boot Udemy\Apuntes\imagenes\Encontrar plantillas HTML en Spring Boot.png)
+![](C:\WorkSpace\empleos\Spring Boot Udemy\Apuntes\imagenes\Encontrar plantillas HTML en Spring Boot.png)
 
 Aceptamos el acuerdo de licencia.
 
-<img src="D:\Spring Boot Udemy\Apuntes\imagenes\Encontrar plantillas HTML en Spring Boot parte 2.png" style="zoom:67%;" />
+<img src="C:\WorkSpace\empleos\Spring Boot Udemy\Apuntes\imagenes\Encontrar plantillas HTML en Spring Boot parte 2.png" style="zoom:67%;" />
 
 Se necesita reiniciar Spring Boot IDE.
 
@@ -257,11 +257,11 @@ Se necesita reiniciar Spring Boot IDE.
 
 2. Creamos la plantilla HTML `home.html` que será una vista en el directorio `src/main/resources/templates` destinado para ellas:
 
-   ![](D:\Spring Boot Udemy\Apuntes\imagenes\Crear plantilla HTML parte 1.png)
+   ![](C:\WorkSpace\empleos\Spring Boot Udemy\Apuntes\imagenes\Crear plantilla HTML parte 1.png)
 
-   <img src="D:\Spring Boot Udemy\Apuntes\imagenes\Crear plantilla HTML parte 2.png" style="zoom:67%;" />
+   <img src="C:\WorkSpace\empleos\Spring Boot Udemy\Apuntes\imagenes\Crear plantilla HTML parte 2.png" style="zoom:67%;" />
 
-   <img src="D:\Spring Boot Udemy\Apuntes\imagenes\Crear plantilla HTML parte 3.png" style="zoom:67%;" />
+   <img src="C:\WorkSpace\empleos\Spring Boot Udemy\Apuntes\imagenes\Crear plantilla HTML parte 3.png" style="zoom:67%;" />
 
 3. El archivo `home` tendrá este código:
 
@@ -280,7 +280,7 @@ Se necesita reiniciar Spring Boot IDE.
 
    El resultado deberá verse así:
 
-   <img src="D:\Spring Boot Udemy\Apuntes\imagenes\Vista home html.png" style="zoom:60%;" />
+   <img src="C:\WorkSpace\empleos\Spring Boot Udemy\Apuntes\imagenes\Vista home html.png" style="zoom:60%;" />
 
    
 
@@ -332,7 +332,7 @@ NOTA: Para importar código en Spring Boot IDE utiliza las teclas `CTRL` + `SHIF
 
    Este es el resultado
 
-   ![](D:\Spring Boot Udemy\Apuntes\imagenes\Vista home html con atributos traidos del controlador.png)
+   ![](C:\WorkSpace\empleos\Spring Boot Udemy\Apuntes\imagenes\Vista home html con atributos traidos del controlador.png)
 
    
 
@@ -340,7 +340,7 @@ NOTA: Para importar código en Spring Boot IDE utiliza las teclas `CTRL` + `SHIF
 
 Al momento de crear un nuevo archivo HTML es preciso incorporar el namespace de Thymeleaf por defecto cada vez que una vista sea creada. Para ello debemos configurar las plantillas HTML en `Window > Preferences > Web > HTML Files > Editor > Templates` y en la tabla que muestra las plantillas seleccionar `New HTML file (5) > Edit...` y escribir el namespace.
 
-![](D:\Spring Boot Udemy\Apuntes\imagenes\Configuracion plantilla HTML con namespace de Thymeleaf por defecto.png)
+![](C:\WorkSpace\empleos\Spring Boot Udemy\Apuntes\imagenes\Configuracion plantilla HTML con namespace de Thymeleaf por defecto.png)
 
 ### Agregar tipos de datos simples al modelo y desplegarlos en la vista
 
@@ -403,7 +403,7 @@ Luego en `home.html` los mostraremos con Thymeleaf de esta manera:
 
 El resultado de `http://localhost:7070` es: 
 
-![](D:\Spring Boot Udemy\Apuntes\imagenes\Vista home html de los atributos traidos del controlador.png)
+![](C:\WorkSpace\empleos\Spring Boot Udemy\Apuntes\imagenes\Vista home html de los atributos traidos del controlador.png)
 
 ### Iteraciones en Thymeleaf: Expresión `<th:each> `
 
@@ -446,7 +446,7 @@ En la vista `detalle.html` declaramos una variable temporal con nombre (*cualqui
 
 El resultado de `http://localhost:7070/listado` es el siguiente:
 
-![](D:\Spring Boot Udemy\Apuntes\imagenes\Vista listado html del listado de ofertas de trabajo traida del controlador.png)
+![](C:\WorkSpace\empleos\Spring Boot Udemy\Apuntes\imagenes\Vista listado html del listado de ofertas de trabajo traida del controlador.png)
 
 ### Crear la clase Vacante para representar una oferta de trabajo
 
@@ -464,11 +464,11 @@ El resultado de `http://localhost:7070/listado` es el siguiente:
 
 3. Creamos los Getter y Setter con `clic derecho > Source > Generate Getters and Setters` y presionar botón `Select All`:
 
-   ![](D:\Spring Boot Udemy\Apuntes\imagenes\Generar Getters y Setters.png)
+   ![](C:\WorkSpace\empleos\Spring Boot Udemy\Apuntes\imagenes\Generar Getters y Setters.png)
 
 4. Sobre escribimos el método `ToString` (para poder imprimir en la consola todos los valores de los atributos en el método `ToString` un objeto de tipo Vacante) `clic derecho > Source > Generate ToString` para seleccionar los atributos (Fields):
 
-   ![](D:\Spring Boot Udemy\Apuntes\imagenes\Sobre escribir el metodo ToString.png)
+   ![](C:\WorkSpace\empleos\Spring Boot Udemy\Apuntes\imagenes\Sobre escribir el metodo ToString.png)
 
 
 
@@ -512,7 +512,7 @@ El resultado de `http://localhost:7070/listado` es el siguiente:
 
 3. El resultado de la URL `http://localhost:7070/detalle` debe ser:
 
-   ![](D:\Spring Boot Udemy\Apuntes\imagenes\Resultado mostrar objeto Vacante en la url detalle.png)
+   ![](C:\WorkSpace\empleos\Spring Boot Udemy\Apuntes\imagenes\Resultado mostrar objeto Vacante en la url detalle.png)
 
 ### Crear objeto `List<Vacante>` y desplegarlo en el modelo
 
@@ -614,13 +614,13 @@ El resultado de `http://localhost:7070/listado` es el siguiente:
 
 4. El resultado de la URL `http://localhost:7070/tabla` debe ser:
 
-   ![](D:\Spring Boot Udemy\Apuntes\imagenes\Resultado mostrar objeto Lista de Vacantes en la url tabla.png)
+   ![](C:\WorkSpace\empleos\Spring Boot Udemy\Apuntes\imagenes\Resultado mostrar objeto Lista de Vacantes en la url tabla.png)
 
 ### Integrar Bootstrap (vía CDN)
 
 Sirve para aplicar diseño a la aplicación. Debemos navegar a la pagina principal de Bootstrap y buscar la opción Download. Luego copiar el link CDN.:
 
-![](D:\Spring Boot Udemy\Apuntes\imagenes\Bootstrap link de CDN.png)
+![](C:\WorkSpace\empleos\Spring Boot Udemy\Apuntes\imagenes\Bootstrap link de CDN.png)
 
 Pegar la etiqueta `<link>` dentro de la etiqueta `<head>` mientras que la etiqueta `<script>` debe ir antes del cierre de la etiqueta `<body>` en `table.html`:
 
@@ -659,7 +659,7 @@ Pegar la etiqueta `<link>` dentro de la etiqueta `<head>` mientras que la etique
 
 Si le agregamos a la tabla la clase `class="table table-striped table-hover table-bordered"` nos quedaría así:
 
-![](D:\Spring Boot Udemy\Apuntes\imagenes\Bootstrap tabla.png)
+![](C:\WorkSpace\empleos\Spring Boot Udemy\Apuntes\imagenes\Bootstrap tabla.png)
 
 ### Condicionales en Thymeleaf
 
@@ -726,7 +726,7 @@ Si le agregamos a la tabla la clase `class="table table-striped table-hover tabl
 
 * El resultado debería verse así
 
-  ![](D:\Spring Boot Udemy\Apuntes\imagenes\Bootstrap tabla con columna Destacado.png)
+  ![](C:\WorkSpace\empleos\Spring Boot Udemy\Apuntes\imagenes\Bootstrap tabla con columna Destacado.png)
 
 ### URLs relativas al ContextPath
 
@@ -812,7 +812,7 @@ Finalmente en la vista `tabla.html` agregar un nuevo encabezado `<th>` a la tabl
 
 El resultado debería verse así:
 
-<img src="D:\Spring Boot Udemy\Apuntes\imagenes\Mostrar imagenes dinamicas y estaticas .png" />
+<img src="C:\WorkSpace\empleos\Spring Boot Udemy\Apuntes\imagenes\Mostrar imagenes dinamicas y estaticas .png" />
 
 
 
@@ -838,7 +838,7 @@ El resultado debería verse así:
 
 10.- Se muestra el resultado HTML en forma gráfica para el usuario.
 
-![](D:\Spring Boot Udemy\Apuntes\imagenes\Ciclo de vida de una petición HTTP en Spring Boot MVC.png)
+![](C:\WorkSpace\empleos\Spring Boot Udemy\Apuntes\imagenes\Ciclo de vida de una petición HTTP en Spring Boot MVC.png)
 
 
 
@@ -883,7 +883,7 @@ Se debe crear el directorio `categorias` y las vistas `listCategorias.html` y `f
 
 Al visitar la dirección web `http://localhost:7070/index` debería obtener:
 
-<img src="D:\Spring Boot Udemy\Apuntes\imagenes\Resultado de index en requestmapping.png" style="zoom:67%;" />
+<img src="C:\WorkSpace\empleos\Spring Boot Udemy\Apuntes\imagenes\Resultado de index en requestmapping.png" style="zoom:67%;" />
 
 ### Anotación @RequestMapping a nivel de clase
 
@@ -978,7 +978,7 @@ Luego en la vista tabla.html pondremos un nuevo titulo <th> y un nuevo <td> con 
 
 De tal manera que al presionar el botón Detalle de la vacante con id = 30 se verá:
 
-![](D:\Spring Boot Udemy\Apuntes\imagenes\Peticion a la url vacantes view 30.png)
+![](C:\WorkSpace\empleos\Spring Boot Udemy\Apuntes\imagenes\Peticion a la url vacantes view 30.png)
 
 ### Anotación @RequestParam
 
@@ -1054,7 +1054,7 @@ Luego, en la vista `tabla.html` haremos el botón *borrar* para cada vacante. El
 
 De esta manera se debería ver la vista al borrar vacante con id = 1:
 
-![](D:\Spring Boot Udemy\Apuntes\imagenes\Resultado boton borrar en tabla vacantes.png)
+![](C:\WorkSpace\empleos\Spring Boot Udemy\Apuntes\imagenes\Resultado boton borrar en tabla vacantes.png)
 
 Para recibir los datos de un formulario HTML que se va a enviar en una petición HTTP tipo POST primero debemos crear el formulario en la vista `formCategoria.html`:
 
@@ -1085,11 +1085,11 @@ public String guardar(@RequestParam("nombre") String nombre, @RequestParam("desc
 
 Es importante que en las anotaciones `@RequestParam` esté especificado el mismo nombre que esta descrito en el atributo `name` de cada `input` en el formulario. Los datos se imprimirán en la consola. Si hacemos una prueba en la URL `localhost:7070/categorias/create` y llenamos los campos podremos comprobar el funcionamiento:
 
-![](D:\Spring Boot Udemy\Apuntes\imagenes\Formulario categorias para probar metodo guardar.png)
+![](C:\WorkSpace\empleos\Spring Boot Udemy\Apuntes\imagenes\Formulario categorias para probar metodo guardar.png)
 
 En la consola se imprimen los datos enviados:
 
-![](D:\Spring Boot Udemy\Apuntes\imagenes\Resultado de probar metodo guardar en el IDE.png)
+![](C:\WorkSpace\empleos\Spring Boot Udemy\Apuntes\imagenes\Resultado de probar metodo guardar en el IDE.png)
 
 
 
@@ -1217,7 +1217,7 @@ public String mostrarTabla(Model model) {
 
 Si hacemos una solicitud a la URL `localhost:7070/tabla` debería renderizar trayendo los datos desde un componente de la capa de servicios:
 
-![](D:\Spring Boot Udemy\Apuntes\imagenes\Resultado de mostrar vista tabla de vacantes desde capa de servicio.png)
+![](C:\WorkSpace\empleos\Spring Boot Udemy\Apuntes\imagenes\Resultado de mostrar vista tabla de vacantes desde capa de servicio.png)
 
 
 
@@ -1269,15 +1269,27 @@ public String verDetalle(@PathVariable("id") int idVacante, Model model) {
 
 De esta manera, en la vista `tablas` podremos cliquear en cualquier botón `Ver Detalle` y nos debería renderizar el resultado siguiente:
 
-<img src="D:\Spring Boot Udemy\Apuntes\imagenes\Resultado de mostrar vacante mediante metodo implementado en el controlador.png" style="zoom:67%;" />
+<img src="C:\WorkSpace\empleos\Spring Boot Udemy\Apuntes\imagenes\Resultado de mostrar vacante mediante metodo implementado en el controlador.png" style="zoom:67%;" />
 
+## SECCION 5: Spring Boot y Thymeleaf - Fragments - Layouts
 
+### Actualización de carpetas en directorio static
 
+En los archivos del curso hay un archivo comprimido llamado `template-empleos.zip` que contiene tres carpetas y templates HTML que se utilizarán en la aplicación. Actualizamos en el proyecto (sobre-escribiendo) las carpetas.
 
+![](C:\WorkSpace\empleos\Spring Boot Udemy\Apuntes\imagenes\Carpeta actualizada static en Spring Boot IDE.png)
 
+En la vista home.html actualizamos el código con el nuevo template y a referenciar con `Thymeleaf` las rutas a los `css` y a las imágenes:
 
+```html
+<link th:href="@{/bootstrap/css/jumbotron.css}" rel="stylesheet">
+```
 
+NOTA: La librería de `JQuery` se agrega vía CDN y no se necesita configurar.
 
+Cuando accedemos a `localhost:7070` debería mostrarse el nuevo template:
+
+![](C:\WorkSpace\empleos\Spring Boot Udemy\Apuntes\imagenes\Nueva pagina principal actualizada .png)
 
 
 
