@@ -1291,9 +1291,37 @@ Cuando accedemos a `localhost:7070` debería mostrarse el nuevo template:
 
 ![](C:\WorkSpace\empleos\Spring Boot Udemy\Apuntes\imagenes\Nueva pagina principal actualizada .png)
 
+### Integrar el diseño de la pagina principal dinámicamente
 
+En el controlador `HomeController` buscamos el método `mostrarHome` y editamos su contenido de manera similar al método `mostrarTabla`:
 
+```java
+@GetMapping("/")
+public String mostrarHome(Model model) {
+	List<Vacante> lista = serviceVacantes.buscarTodas();
+	model.addAttribute("vacantes", lista);
+	return "home";
+}
+```
 
+En la vista `home.html` habilitaremos el `<div class="row">` (eliminando las demás row, también eliminando la categoría) de manera dinámica. De la misma manera lo hacemos con el nombre de la vacante, la fecha, la descripción y la imagen:
 
+```html
+<div class="row" th:each="vacante : ${vacantes}">
+  <div class="col-md-3">            
+    <img class="rounded mx-auto d-block" th:src="@{/images/{img} (img=${vacante.imagen})  }" alt="Generic placeholder image" width="220" height="220">            
+  </div>
+  <div class="col-md-9">
+    <h2 th:text="${vacante.nombre}">Arquitecto</h2>
+    <h6 class="card-title"><strong>Categoría: </strong> <span></span></h6>
+    <h6 class="card-title"><strong>Publicado: </strong> <span th:text="${vacante.fecha}">2019-01-01 </span></h6>                
+    <p th:text="${vacante.descripcion}"></p>
+    <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>     
+  </div>
+</div>
+```
 
+El resultado de `localhost:7070` debiera verse así:
+
+<img src="C:\WorkSpace\empleos\Spring Boot Udemy\Apuntes\imagenes\home html mostrado dinamicamente.png" style="zoom:67%;" />
 
