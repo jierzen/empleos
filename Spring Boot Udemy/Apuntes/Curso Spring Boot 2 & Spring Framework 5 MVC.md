@@ -45,7 +45,7 @@ Spring Boot simplifica los pasos 1 y 3 del proceso, para enfocarse en el paso 2 
 
 ### Instalación de Spring Tools IDE
 
-Está basado en Eclipse
+Está basado en Eclipse.
 
 1. Ir a este [link](https://spring.io/tools) que es la pagina oficial de Spring.
 
@@ -53,7 +53,7 @@ Está basado en Eclipse
 
    ![IDE](C:\WorkSpace\empleos\Spring Boot Udemy\Apuntes\imagenes\IDE descargar.png)
 
-3. Mueve y extrae el contenido del archivo .jar la carpeta en `C:` (si no puede abrir el archivo se deberá instalar [Java Runtime Environment](https://www.java.com/es/download/), con se extraerá sin problemas) y se creará la carpeta STS donde estará ubicado el IDE.
+3. Mueve y extrae el contenido del archivo .jar la carpeta en `C:` (si no puede abrir el archivo se deberá instalar [Java Runtime Environment](https://www.java.com/es/download/), para extraer sin problemas) y se creará la carpeta STS donde estará ubicado el IDE.
 
 4. Entra en la carpeta del IDE y edita el archivo `SpringToolSuite4.ini` para asignar la ruta `C:\Program Files\Java\jdk-11.0.12\bin\javaw.exe` después del `-vm` y antes del `-vmargs` (debe coincidir con la ruta del JDK instalado [antes](###Instalación de Java SE Development Kit 11 (JDK))). 
 
@@ -231,7 +231,7 @@ Aceptamos el acuerdo de licencia.
 
 <img src="C:\WorkSpace\empleos\Spring Boot Udemy\Apuntes\imagenes\Encontrar plantillas HTML en Spring Boot parte 2.png" style="zoom:67%;" />
 
-Se necesita reiniciar Spring Boot IDE.
+Será necesario Spring Boot IDE.
 
 ### Creación del controlador HomeController para el proyecto Empleos
 
@@ -1325,3 +1325,8 @@ El resultado de `localhost:7070` debiera verse así:
 
 <img src="C:\WorkSpace\empleos\Spring Boot Udemy\Apuntes\imagenes\home html mostrado dinamicamente.png" style="zoom:67%;" />
 
+
+
+### Formulario HTML para crear una Vacante
+
+En el controlador `VacantesController` crear método `crear` 

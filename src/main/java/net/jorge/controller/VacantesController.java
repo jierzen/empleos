@@ -18,6 +18,11 @@ public class VacantesController {
 	@Autowired
 	private IVacantesService serviceVacantes;
 	
+	@GetMapping("/create")
+	public String crear() {
+		return "vacantes/formVacante";
+	}
+	
 	@GetMapping("/delete")
 	public String eliminar(@RequestParam("id") int idVacante, Model model) {
 		System.out.println("Borrando vacante con id: " + idVacante);
