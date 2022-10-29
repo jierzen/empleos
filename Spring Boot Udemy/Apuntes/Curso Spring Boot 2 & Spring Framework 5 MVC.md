@@ -219,7 +219,7 @@ public class HomeController{
 
 ```
 
-TIP: Indentar código en Spring Boot IDE: `CTRL` + `SHIFT` + `F`
+Tip: Indentar código en Spring Boot IDE: `CTRL` + `SHIFT` + `F`
 
 ### Encontrar plantillas HTML
 
@@ -286,9 +286,9 @@ Será necesario Spring Boot IDE.
 
 ### Agregar datos al modelo para desplegarlo en la vista
 
-NOTA: Para incrementar o reducir el tamaño de la letra del código en Spring Boot IDE utiliza las teclas `CTRL` +`SHIFT` + `(+/-)`
+Tip: Para incrementar o reducir el tamaño de la letra del código en Spring Boot IDE utiliza las teclas `CTRL` +`SHIFT` + `(+/-)`
 
-NOTA: Para importar código en Spring Boot IDE utiliza las teclas `CTRL` + `SHIFT` + `O`.
+Tip: Para importar código en Spring Boot IDE utiliza las teclas `CTRL` + `SHIFT` + `O`.
 
 1. En `HomeController` agregar al método `mostrarHome` (el nombre del método puede ser otro) un parámetro de tipo ***Model*** el cual tiene un método `addAttribute(String attributeName, Object attributeValue) : Model - Model` que utilizaremos para enviar datos a la vista. Generaremos el atributo ***mensaje*** que contiene el String "Bienvenidos a Empleos App" y el atributo ***fecha*** que contiene la fecha actual.
 
