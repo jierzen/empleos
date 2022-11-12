@@ -24,19 +24,27 @@ public class VacantesController {
 		return "vacantes/formVacante";
 	}
 	
+	//se pone databinding para ahorrar codigo
+//	@PostMapping("/save")
+//	public String guardar(@RequestParam("nombre") String nombre,@RequestParam("descripcion") String descripcion,
+//			@RequestParam("categoria") String categoria,@RequestParam("estatus") String estatus,
+//			@RequestParam("fecha") String fecha,@RequestParam("destacado") int destacado,
+//			@RequestParam("salario") double salario,@RequestParam("detalles") String detalles) {
+//
+//		System.out.println("Nombre vacante: " + nombre);
+//		System.out.println("Descripcion: " + descripcion);
+//		System.out.println("Estatus: " + estatus);
+//		System.out.println("Fecha de publicacion: " + fecha);
+//		System.out.println("Destacado: " + destacado);
+//		System.out.println("Salario ofrecido: " + salario);
+//		System.out.println("Detalles: " + detalles);
+//		return "vacantes/listVacantes";
+//	}
+	
 	@PostMapping("/save")
-	public String guardar(@RequestParam("nombre") String nombre,@RequestParam("descripcion") String descripcion
-			,@RequestParam("categoria") String categoria,@RequestParam("estatus") String estatus,
-			@RequestParam("fecha") String fecha,@RequestParam("destacado") int destacado,
-			@RequestParam("salario") double salario,@RequestParam("detalles") String detalles) {
+	public String guardar(Vacante vacante) {
 
-		System.out.println("Nombre vacante: " + nombre);
-		System.out.println("Descripcion: " + descripcion);
-		System.out.println("Estatus: " + estatus);
-		System.out.println("Fecha de publicacion: " + fecha);
-		System.out.println("Destacado: " + destacado);
-		System.out.println("Salario ofrecido: " + salario);
-		System.out.println("Detalles: " + detalles);
+		System.out.println("Vacante: " + vacante);
 		return "vacantes/listVacantes";
 	}
 	
