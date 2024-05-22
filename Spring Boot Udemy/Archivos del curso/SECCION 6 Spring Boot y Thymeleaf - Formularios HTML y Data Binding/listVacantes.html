@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="utf-8">
@@ -16,7 +16,9 @@
     <link href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" rel="stylesheet">
   </head>
 
-<header th:insert="fragments/menu :: menu-principal"></header>  
+  <body>
+  
+    <header th:insert="fragments/menu :: menu-principal"></header>  
 
     <main role="main">     
       <hr>
@@ -65,6 +67,6 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script th:src="@{/bootstrap/js/bootstrap.min.js}"></script>         
+    <script th:src="@{/bootstrap/js/bootstrap.min.js}"></script>     
   </body>
 </html>
